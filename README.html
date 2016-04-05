@@ -7,6 +7,8 @@ Project
     <title>Github Project</title>
     <!--<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">-->
+    <input type="file" onchange="previewFile()"><br>
+    <img src="" height="200" alt="Image preview...">
 <style>
 body {margin:0;}
 div {
@@ -62,9 +64,28 @@ background="http://www.borongaja.com/data_images/out/21/650990-rugby-ball.jpg">
 <div style="color:white; text-align:left;font:18px verdana"> sample text
 </div>  
 <script>    
-document.write("<div style='color:white;font:14px verdana'> Upload a Photo Here </div>")
+document.write("<div style='color:white;font:14px verdana'> Upload a Photo Here </div>");
    
-   document.write("")
+   document.write("");
+   
+   function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+
+  previewFile();  //calls the function named previewFile()
+
 </script>
 <!--<div id="page-mask"></div>
 <div id="window">Dialog</div>-->
