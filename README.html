@@ -61,7 +61,26 @@ background="http://www.borongaja.com/data_images/out/21/650990-rugby-ball.jpg">
   <li><a href="#about">ABOUT</a></li>
   <li><a href="http://www.greenwichrugby.com/schedule.html">SCHEDULE</a></li>   
 </ul>  
-<div style="color:white; text-align:left;font:18px verdana"> sample text
+<center>
+<img src="http://images.cooltext.com/4647936.png">
+</center>
+<div style="color:white; text-align:left;font:18px verdana">
+<script>
+function rugby(picture, player, date, opponent){
+      this.picture = picture;
+      this.player = player;
+      this.date = date;
+      this.opponent = opponent;
+  }
+     var pic1 = new rugby("<img src=http://i.imgur.com/DRJYc4e.jpg height=84 width=84>", "Patrick McTiernan", "3/26/16", "Union");
+     var pic2 = new rugby("<img src=http://i.imgur.com/bOqxG1P.jpg height=84 width=60>", "Soh Nakayama", "3/26/16", "Union");
+     var pic3 = new rugby("<img src=http://i.imgur.com/Ds8LA0N.jpg height=84 width=84>", "Nathaniel Ung, Kevin Kumar, Soh Nakayama, Brooks Lufkin", "3/26/16", "Union");
+     document.write("<table style='color:white; width:100%'><tr><td>Picture</td><td>Players</td><td>Date</td><td>Opponent</td></tr>");  
+     document.write("<tr> <td>"+pic1.picture+"</td> <td>"+pic1.player+"</td><td>"+pic1.date+"</td><td>"+pic1.opponent+"</td></tr>");
+     document.write("<tr> <td>"+pic2.picture+"</td> <td>"+pic2.player+"</td><td>"+pic2.date+"</td><td>"+pic2.opponent+"</td></tr>");
+     document.write("<tr> <td>"+pic3.picture+"</td> <td>"+pic3.player+"</td><td>"+pic3.date+"</td><td>"+pic3.opponent+"</td></tr> </table>");
+</script>
+</div>
 <script>    
 document.write("<div style='color:white;font:14px verdana'> Upload a Photo Here </div>");
    
@@ -84,29 +103,7 @@ document.write("<div style='color:white;font:14px verdana'> Upload a Photo Here 
   }
 
   previewFile(); //calls the function named previewFile()
-  function rugby(picture, player, date, opponent){
-      this.picture = picture;
-      this.player = player;
-      this.date = date;
-      this.opponent = opponent;
-  }
-     var pic1 = new rugby("http://i.imgur.com/DRJYc4e.jpg", "Patrick McTiernan", "3/26/16", "Union");
-     var pic2 = new rugby("http://i.imgur.com/bOqxG1P.jpg", "Soh Nakayama", "3/26/16", "Union");
-     var pic3 = new rugby("http://i.imgur.com/Ds8LA0N.jpg", "Nathaniel Ung, Kevin Kumar, Soh Nakayama, Brooks Lufkin", "3/26/16", "Union");
-     document.write("<table style='width:100%'> 
-    <tr>
-    <td>Jill</td>
-    <td>Smith</td> 
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td> 
-    <td>94</td>
-  </tr>
-</table>");
-</script>
-</div>
+ </script>
 <!--<div id="page-mask"></div>
 <div id="window">Dialog</div>-->
 </body>
